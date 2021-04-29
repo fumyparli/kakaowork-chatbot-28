@@ -97,11 +97,11 @@
     <div style="display: flex; alignItems: center; flexDirection: row; text-align: center">
         <figure >
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116593803-73cf8f80-a95c-11eb-9857-9493cba76671.gif">
-            <figcaption>일정 보기</figcaption>
+            <!-- <figcaption>일정 보기</figcaption> -->
         </figure>
          <figure>
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116593846-834ed880-a95c-11eb-8d5c-52aeae2bc5bb.gif">
-            <figcaption>일정 등록</figcaption>
+            <!-- <figcaption>일정 등록</figcaption> -->
         </figure>
     </div>
 </div>
