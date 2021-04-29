@@ -6,6 +6,9 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const index = require('./routes/index');
+const callbackRouter_sb=require('./routes/callbackRouter_seungbeom.js');
+const requestRouter_sb=require('./routes/requestRouter_seungbeom.js');
+const welcomeRouter_sb=require('./routes/welcomeRouter_seungbeom');
 
 const app = express();
 
@@ -14,7 +17,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/', index);
+app.use('/', welcomeRouter_sb);
+app.use('/request', requestRouter_sb);
+app.use('/callback', callbackRouter_sb);
+// app.use('/', index);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

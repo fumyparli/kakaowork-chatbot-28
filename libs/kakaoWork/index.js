@@ -4,7 +4,10 @@ const axios = require('axios');
 const kakaoInstance = axios.create({
   baseURL: 'https://api.kakaowork.com',
   headers: {
-    Authorization: `Bearer ${Config.keys.kakaoWork.bot}`,
+	  //테스트 권한
+    //Authorization: `Bearer ${Config.keys.kakaoWork.testYoungMo}`,
+	  Authorization: `Bearer ${Config.keys.kakaoWork.test_fumy}`,
+	 // Authorization: `Bearer ${Config.keys.kakaoWork.testYeongKyu}`,
   },
 });
 
@@ -30,3 +33,24 @@ exports.sendMessage = async ({ conversationId, text, blocks }) => {
   const res = await kakaoInstance.post('/v1/messages.send', data);
   return res.data.message;
 };
+	
+	
+// function for db query - 이승범
+// create table push_role(id int(100) not null AUTO_INCREMENT PRIMARY KEY,user_id int(100) not null,conversation_id int(100) not null,role varchar(100) not null);
+
+const mysql = require("mysql2/promise");
+const db_info = {
+    host: "127.0.0.1",
+    port: "3306",
+    user: '28team',
+    password: '111111',
+    database: "chatbot",
+};
+
+exports.mysql_query = async (my_query) => {
+    const conn = await mysql.createConnection(db_info);
+    const [rows] = await conn.query(my_query);
+    await conn.end();
+    return rows;
+};
+	
