@@ -35,11 +35,11 @@
     <div style="display: flex; alignItems: center; flexDirection: row; text-align: center">
         <figure>
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116588077-11739080-a956-11eb-9019-6270965818c5.gif">
-            <figcaption>회의 보기</figcaption>
+            <!-- <figcaption>회의 보기</figcaption> -->
         </figure>
          <figure>
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116588288-53043b80-a956-11eb-87ce-a956c0d8bd5d.gif">
-            <figcaption>회의 예약</figcaption>
+            <!-- <figcaption>회의 예약</figcaption> -->
         </figure>
     </div>
 </div>
@@ -61,15 +61,15 @@
     <div style="display: flex; alignItems: center; flexDirection: row; text-align: center">
         <figure >
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116592674-3a4a5480-a95b-11eb-9440-148fa1097650.gif">
-            <figcaption>선택한 역할 보기</figcaption>
+            <!-- <figcaption>선택한 역할 보기</figcaption> -->
         </figure>
          <figure>
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116593358-f441c080-a95b-11eb-96ba-ca475efc0d5c.gif">
-            <figcaption>역할 선택하기</figcaption>
+            <!-- <figcaption>역할 선택하기</figcaption> -->
         </figure>
         <figure>
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116593475-16d3d980-a95c-11eb-91b2-33b41ab5af36.gif">
-            <figcaption>새로운 역할 추가하기</figcaption>
+            <!-- <figcaption>새로운 역할 추가하기</figcaption> -->
         </figure>
     </div>
 </div>
@@ -77,11 +77,11 @@
     <div style="display: flex; alignItems: center; flexDirection: row; text-align: center">
         <figure >
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116592831-6665d580-a95b-11eb-839e-132bd7c90e29.gif">
-            <figcaption>나의 역할 초기화하기</figcaption>
+            <!-- <figcaption>나의 역할 초기화하기</figcaption> -->
         </figure>
          <figure>
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116593596-3834c580-a95c-11eb-9452-2c0dd5a799a7.gif">
-            <figcaption>메세지 수신</figcaption>
+            <!-- <figcaption>메세지 수신</figcaption> -->
         </figure>
     </div>
 </div>
@@ -89,6 +89,7 @@
 ## 일정 관리
 
 >front-end : 이유섭 back-end : 강재현 
+
 `일정 보기` : 등록된 일정을 전부 보여줍니다.
 
 `일정 등록` : 일정을 등록합니다.
