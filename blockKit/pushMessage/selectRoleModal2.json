@@ -13,13 +13,17 @@
         "type": "select",
         "name": "select_name",
         "options": [
-           {
-            "text": "선택해주세요",
+          {
+            "text": "프론트엔드 1팀",
             "value": "1"
+          },
+          {
+            "text": "백엔드 2팀",
+            "value": "2"
           }
         ],
-        "required": true,
-		"placeholder": "옵션을 선택해주세요"
+        "required": false,
+        "placeholder": "옵션을 선택해주세요"
       }
     ]
   }

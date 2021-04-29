@@ -46,7 +46,8 @@
         "type": "button",
 		"value": "setRoleMessage",
 		"text": "역할 설정하기",
-		"action_type": "call_modal",
+		"action_type": "submit_action",
+		"action_name": "submit",
         "style": "default"
     },
     {
@@ -59,10 +60,25 @@
 	{
 	  "type": "divider"
 	},
-	{
-	  "type": "button",
-	  "text": "기능 3",
-	  "style": "default"
-	}
+  {
+	  "type": "text",
+	  "text": "이용자의 일정을 볼 수 있고\n일정을 등록할 수 있습니다.",
+	  "markdown": true
+	},
+  	{
+        "type": "button",
+        "value": "showSchedule",
+        "action_type": "submit_action",
+	    "action_name": "showSchedule",
+        "text": "일정 보기",
+        "style": "default"
+    },
+	 {
+        "type": "button",
+        "value": "setSchedule",
+        "text": "일정 등록",
+        "action_type": "call_modal",
+        "style": "default"
+    }
   ]
 }

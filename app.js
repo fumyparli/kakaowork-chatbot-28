@@ -9,6 +9,7 @@ const index = require('./routes/index');
 const callbackRouter_sb=require('./routes/callbackRouter_seungbeom.js');
 const requestRouter_sb=require('./routes/requestRouter_seungbeom.js');
 const welcomeRouter_sb=require('./routes/welcomeRouter_seungbeom');
+const functions_schedules=require('./routes/functions_schedules');
 
 const app = express();
 
@@ -20,10 +21,11 @@ app.use(cookieParser());
 app.use('/', welcomeRouter_sb);
 app.use('/request', requestRouter_sb);
 app.use('/callback', callbackRouter_sb);
-// app.use('/', index);
+app.use('/', index);
+app.use('/',functions_schedules);
 
 
-// catch 404 and forward to error handler
+// catch 404 and forward to error handlere
 app.use(function(req, res, next) {
   const err = new Error('Not Found');
   err.status = 404;

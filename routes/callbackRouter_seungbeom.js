@@ -4,6 +4,13 @@ const router = express.Router();
 const libKakaoWork = require('../libs/kakaoWork');
 let roleSelectedMessage = require('../blockKit/pushMessage/roleSelectedMessage');
 let chatBlock = require('../blockKit/pushMessage/chatBlock');
+const welcomeMessage = require("../blockKit/WelcomeMessage");
+const setRoleMessage = require("../blockKit/pushMessage/setRoleMessage");
+let showRoleMessage = require("../blockKit/pushMessage/showRoleMessage");
+let noRoleMessage = require("../blockKit/pushMessage/noRoleMessage");
+const resetRoleMessage = require("../blockKit/pushMessage/resetRoleMessage");
+const noExistRoleMessage = require("../blockKit/pushMessage/noExistRoleMessage");
+
 
 // routes/callback.js
 router.post('/', async (req, res, next) => {
@@ -54,11 +61,66 @@ router.post('/', async (req, res, next) => {
 		  res.json({});
 		  break;
 	  }
+	  case "setRoleMessage": {
+			console.log(value);
+            libKakaoWork.sendMessage({
+                conversationId: message.conversation_id,
+                text: setRoleMessage.text,
+                blocks: setRoleMessage.blocks,
+            });
+            res.json({});
+            break;
+        }
+	  case "showRoleMessage": {
+            let rows = await libKakaoWork.mysql_query(
+                `select distinct role from push_role where user_id=${react_user_id};`
+            );
+            let role_message;
+            if (rows.length !== 0) {
+                const roles = rows.map((row) => {
+                    return row.role;
+                });
+                const roles_str = roles.join(", ");
+                showRoleMessage.blocks[0].text = `선택한 역할은 ${roles_str} 입니다.`;
+                role_message = showRoleMessage;
+            } else {
+                role_message = noRoleMessage;
+            }
+            await libKakaoWork.sendMessage({
+                conversationId: message.conversation_id,
+                text: role_message.text,
+                blocks: role_message.blocks,
+            });
+			res.json({});
+            break;
+        }
+	  case "resetRoleMessage": {
+            let rows = await libKakaoWork.mysql_query(
+                `delete from push_role where user_id="${react_user_id}"`
+            );
+            await libKakaoWork.sendMessage({
+                conversationId: message.conversation_id,
+                text: resetRoleMessage.text,
+                blocks: resetRoleMessage.blocks,
+            });
+			res.json({});
+            break;
+        }
+	  case "returnWelcome": {
+            await libKakaoWork.sendMessage({
+                conversationId: message.conversation_id,
+                text: welcomeMessage.text,
+                blocks: welcomeMessage.blocks,
+            });
+			res.json({});
+            break;
+        }
+		  
       default:
-		  res.json({ result: true });
+		  // res.json({ result: true });
+  		  next();
 		  break;
   }
-  // next();
 });
 
 module.exports = router;

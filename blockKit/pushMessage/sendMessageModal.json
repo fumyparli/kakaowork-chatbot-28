@@ -13,16 +13,12 @@
         "type": "select",
         "name": "select_name",
         "options": [
-          {
-            "text": "옵션 1",
+		  {
+            "text": "선택해주세요",
             "value": "1"
-          },
-          {
-            "text": "옵션 2",
-            "value": "2"
           }
-        ],
-        "required": false,
+		],
+        "required": true,
         "placeholder": "옵션을 선택해주세요"
       },
       {
@@ -33,7 +29,7 @@
       {
         "type": "input",
         "name": "input_name",
-        "required": false,
+        "required": true,
         "placeholder": "내용을 입력해주세요"
       }
     ]

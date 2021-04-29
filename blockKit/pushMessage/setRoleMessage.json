@@ -15,7 +15,8 @@
         "type": "button",
         "text": "선택한 역할 보기",
         "value": "showRoleMessage",
-        "action_type": "call_modal",
+        "action_type": "submit_action",
+		"action_name": "submit",
         "style": "default"
       },
       {
@@ -36,8 +37,9 @@
         "type": "button",
         "text": "나의 역할 초기화하기",
         "value": "resetRoleMessage",
-        "action_type": "call_modal",
+        "action_type": "submit_action",
+		"action_name": "submit",
         "style": "default"
       }
     ]
-  }
+}

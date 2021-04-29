@@ -5,9 +5,11 @@ const kakaoInstance = axios.create({
   baseURL: 'https://api.kakaowork.com',
   headers: {
 	  //테스트 권한
-    //Authorization: `Bearer ${Config.keys.kakaoWork.testYoungMo}`,
-	  Authorization: `Bearer ${Config.keys.kakaoWork.test_fumy}`,
+	  Authorization: `Bearer ${Config.keys.kakaoWork.bot}`,
+    // Authorization: `Bearer ${Config.keys.kakaoWork.testYoungMo}`,
+	//Authorization: `Bearer ${Config.keys.kakaoWork.test_fumy}`,
 	 // Authorization: `Bearer ${Config.keys.kakaoWork.testYeongKyu}`,
+   // Authorization: `Bearer ${Config.keys.kakaoWork.testjh}`,
   },
 });
 

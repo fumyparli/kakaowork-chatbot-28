@@ -15,7 +15,8 @@
         "type": "button",
         "text": "돌아가기",
         "value": "returnWelcome",
-        "action_type": "call_modal",
+        "action_type": "submit_action",
+		"action_name": "submit",
         "style": "default"
       }
     ]
