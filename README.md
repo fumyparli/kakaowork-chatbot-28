@@ -1,2 +1,5 @@
-# gpd-chat-bot
-KakaoWork Chatbot
+# 28조 프로젝트 협업 챗봇
+
+-[기능설명] (# 기능1)
+
+## 기능1
