@@ -34,7 +34,8 @@
 <div>
     <div style="display: flex; alignItems: center; flexDirection: row; text-align: center">
         <figure>
-            <img width="200px" src="https://user-images.githubusercontent.com/77970826/116588077-11739080-a956-11eb-9019-6270965818c5.gif">
+            <img width="200px" 
+            src="https://user-images.githubusercontent.com/77970826/116588077-11739080-a956-11eb-9019-6270965818c5.gif">
             <!-- <figcaption>회의 보기</figcaption> -->
         </figure>
          <figure>
@@ -71,11 +72,7 @@
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116593475-16d3d980-a95c-11eb-91b2-33b41ab5af36.gif">
             <!-- <figcaption>새로운 역할 추가하기</figcaption> -->
         </figure>
-    </div>
-</div>
-<div>
-    <div style="display: flex; alignItems: center; flexDirection: row; text-align: center">
-        <figure >
+         <figure >
             <img width="200px" src="https://user-images.githubusercontent.com/77970826/116592831-6665d580-a95b-11eb-839e-132bd7c90e29.gif">
             <!-- <figcaption>나의 역할 초기화하기</figcaption> -->
         </figure>
